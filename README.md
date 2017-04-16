@@ -1,4 +1,4 @@
-# instantsolutions/gitlab-ci-android-runner:1.0.0
+# instantsolutions/gitlab-ci-android-runner:1.0.1
 A docker image with gitlab-ci-multi-runner, which can run android builds.
 
 [![Docker Stars](https://img.shields.io/docker/stars/instantsolutions/gitlab-ci-android-runner.svg)](https://hub.docker.com/r/instantsolutions/gitlab-ci-android-runner)
@@ -8,10 +8,12 @@ A docker image with gitlab-ci-multi-runner, which can run android builds.
 
 ## Whats included
 
-* Platform Level 7-25
+* Android Platform Level 7-25
 * Build Tools 19.1.0, 20.0.0, 21.1.2, 22.0.1, 23.0.3, 24.0.3, 25.0.2
 * Google play services
 * Google repository
+* Android Support Repository
+* Google Play Billing Library
 
 ## Getting started
 
@@ -20,7 +22,7 @@ A docker image with gitlab-ci-multi-runner, which can run android builds.
 Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/instantsolutions/gitlab-ci-android-runner).
 
 ```bash
-docker pull instantsolutions/gitlab-ci-android-runner:1.0.0
+docker pull instantsolutions/gitlab-ci-android-runner:1.0.1
 ```
 
 Alternatively you can build the image yourself.
@@ -28,29 +30,30 @@ Alternatively you can build the image yourself.
 ```bash
 docker build -t instantsolutions/gitlab-ci-android-runner github.com/instant-solutions/docker-gitlab-ci-android-runner
 ```
+### Running
 
-### Running without persistence
+Update the values of `CI_SERVER_URL`, `RUNNER_TOKEN` and `RUNNER_DESCRIPTION` in the below commands. If these enviroment variables are not specified, you will be prompted to enter these details interactively on first run.
+
+### Without persistence
 
 ```bash
 docker run --name gitlab-ci-android-runner -d --restart=always \
   --env='CI_SERVER_URL=http://your.gitlab.host/ci' --env='RUNNER_TOKEN=token' \
   --env='RUNNER_DESCRIPTION=androidrunner' --env='RUNNER_EXECUTOR=shell' \
-  instantsolutions/gitlab-ci-android-runner:1.0.0
+  instantsolutions/gitlab-ci-android-runner:1.0.1
 ```
 
 Update the values of `CI_SERVER_URL`, `RUNNER_TOKEN` and `RUNNER_DESCRIPTION` in the above command. If these enviroment variables are not specified, you will be prompted to enter these details interactively on first run.
 
-### Running with persistence
+### With persistence
 
 ```bash
 docker run --name gitlab-ci-android-runner -d --restart=always \
   --volume /srv/docker/gitlab-runner:/home/gitlab_ci_multi_runner/data \
   --env='CI_SERVER_URL=http://your.gitlab.host/ci' --env='RUNNER_TOKEN=token' \
   --env='RUNNER_DESCRIPTION=androidrunner' --env='RUNNER_EXECUTOR=shell' \
-  instantsolutions/gitlab-ci-android-runner:1.0.0
+  instantsolutions/gitlab-ci-android-runner:1.0.1
 ```
-
-Update the values of `CI_SERVER_URL`, `RUNNER_TOKEN` and `RUNNER_DESCRIPTION` in the above command. If these enviroment variables are not specified, you will be prompted to enter these details interactively on first run.
 
 
 ## More information
