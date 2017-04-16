@@ -1,6 +1,18 @@
 # instantsolutions/gitlab-ci-android-runner:1.0.0
 A docker image with gitlab-ci-multi-runner, which can run android builds.
 
+[![Docker Stars](https://img.shields.io/docker/stars/instantsolutions/gitlab-ci-android-runner.svg)](https://hub.docker.com/r/instantsolutions/gitlab-ci-android-runner)
+[![Docker Pulls](https://img.shields.io/docker/pulls/instantsolutions/gitlab-ci-android-runner.svg)](https://hub.docker.com/r/instantsolutions/gitlab-ci-android-runner)
+[![Docker builds](https://img.shields.io/docker/build/instantsolutions/gitlab-ci-android-runner.svg)](https://hub.docker.com/r/instantsolutions/gitlab-ci-android-runner)
+[![](https://images.microbadger.com/badges/image/instantsolutions/gitlab-ci-android-runner.svg)](https://microbadger.com/images/instantsolutions/gitlab-ci-android-runner "Get your own image badge on microbadger.com")
+
+## Whats included
+
+* Platform Level 7-25
+* Build Tools 19.1.0, 20.0.0, 21.1.2, 22.0.1, 23.0.3, 24.0.3, 25.0.2
+* Google play services
+* Google repository
+
 ## Getting started
 
 ### Installation
