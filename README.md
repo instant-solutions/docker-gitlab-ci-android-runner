@@ -46,8 +46,6 @@ docker run -d --restart=always \
   instantsolutions/gitlab-ci-android-runner:1.0.1
 ```
 
-Update the values of `CI_SERVER_URL`, `RUNNER_TOKEN` and `RUNNER_DESCRIPTION` in the above command. If these enviroment variables are not specified, you will be prompted to enter these details interactively on first run.
-
 ### With persistence
 
 ```bash
