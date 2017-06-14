@@ -1,4 +1,4 @@
-# instantsolutions/gitlab-ci-android-runner:1.0.1
+# instantsolutions/gitlab-ci-android-runner:1.0.2
 A docker image with gitlab-ci-multi-runner, which can run android builds.
 
 [![Docker Stars](https://img.shields.io/docker/stars/instantsolutions/gitlab-ci-android-runner.svg)](https://hub.docker.com/r/instantsolutions/gitlab-ci-android-runner)
@@ -8,8 +8,8 @@ A docker image with gitlab-ci-multi-runner, which can run android builds.
 
 ## Whats included
 
-* Android Platform Level 7-25
-* Build Tools 19.1.0, 20.0.0, 21.1.2, 22.0.1, 23.0.3, 24.0.3, 25.0.2
+* Android Platform Level 7-26
+* Build Tools 19.1.0, 20.0.0, 21.1.2, 22.0.1, 23.0.3, 24.0.3, 25.0.2, 26.0.0
 * Google play services
 * Google repository
 * Android Support Repository
@@ -22,7 +22,7 @@ A docker image with gitlab-ci-multi-runner, which can run android builds.
 Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/instantsolutions/gitlab-ci-android-runner).
 
 ```bash
-docker pull instantsolutions/gitlab-ci-android-runner:1.0.1
+docker pull instantsolutions/gitlab-ci-android-runner:1.0.2
 ```
 
 Alternatively you can build the image yourself.
@@ -43,7 +43,7 @@ docker run -d --restart=always \
   --env='RUNNER_TOKEN=token' \
   --env='RUNNER_DESCRIPTION=androidrunner' \
   --env='RUNNER_EXECUTOR=shell' \
-  instantsolutions/gitlab-ci-android-runner:1.0.1
+  instantsolutions/gitlab-ci-android-runner:1.0.2
 ```
 
 ### With persistence
@@ -56,7 +56,7 @@ docker run -d --restart=always \
   --env='RUNNER_TOKEN=token' \
   --env='RUNNER_DESCRIPTION=androidrunner' \
   --env='RUNNER_EXECUTOR=shell' \
-  instantsolutions/gitlab-ci-android-runner:1.0.1
+  instantsolutions/gitlab-ci-android-runner:1.0.2
 ```
 
 
