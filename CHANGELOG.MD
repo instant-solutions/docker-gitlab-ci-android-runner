@@ -1,5 +1,8 @@
 # Changelog
 
+#### 1.0.3
+ - Use Android SDK Tools 26.0.2
+
 #### 1.0.2
  - Added Platform 26, Build Tools 26.0.0
 
