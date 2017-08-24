@@ -64,3 +64,11 @@ docker run -d --restart=always \
 
 * Read about [gitlab-ci-multi-runner](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/) to learn how integration works with GitLab CI.
 * This image is based on [docker-gitlab-ci-multi-runner](https://github.com/sameersbn/docker-gitlab-ci-multi-runner), which handles registration and startup.
+
+## License
+
+docker-gitlab-ci-android-runner is licensed under the terms of the Apache License 2.0. See the LICENSE file for more info.
+
+## Author
+
+Made with ❤️ in Austria by [instant:solutions](https://instant-it.at)
